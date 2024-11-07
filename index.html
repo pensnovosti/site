@@ -2,52 +2,60 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>тестируем</title>
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  <title>Адаптивная страница с фреймом</title>
 
-   ym(92790536, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/92790536" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+  <!-- Код Яндекс.Метрики -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+      k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(92790536, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/92790536" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- Конец кода Яндекс.Метрики -->
+
+  <style>
+    /* Сброс отступов и границ для всего */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Контейнер, занимающий всю высоту страницы */
+    html, body {
+      height: 100%;
+      overflow: hidden; /* Убираем прокрутку */
+    }
+
+    /* Стили для фрейма */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
-<div>
-  <div style="position:relative;padding-top:56.25%;">
-    <iframe src="https://hotblogtop.com/v1/short/137091?stream_uuid=2e3848ec-dcaa-4991-b739-63f9afac1f06" frameborder="0" allowfullscreen
-      style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  </div>                    
-</div>
-
-<!-- Медиазапросы для адаптации под мобильные устройства -->
-<style>
-  /* Стандартное соотношение 16:9 для больших экранов */
-  div > div {
-    padding-top: 56.25%;
-  }
-  
-  /* Соотношение сторон на мобильных устройствах (например, 4:3) */
-  @media (max-width: 768px) {
-    div > div {
-      padding-top: 75%; /* Высота 75% от ширины */
-    }
-  }
-  
-  /* Соотношение сторон для очень маленьких экранов (например, квадратное 1:1) */
-  @media (max-width: 480px) {
-    div > div {
-      padding-top: 100%; /* Высота 100% от ширины */
-    }
-  }
-</style>
+  <div class="iframe-container">
+    <iframe src="https://www.etagi.com/" allowfullscreen></iframe>
+  </div>
 </body>
 </html>
